@@ -2,7 +2,8 @@ from tkinter import*
 from tkinter import ttk
 from tkinter import messagebox
 from PIL import Image,ImageTk
-from Add import Add
+from add import Add
+from delete import Delete
 
 class Face_Recognition:
     def __init__(self,root):
@@ -40,11 +41,9 @@ class Face_Recognition:
 
 
       
-
-# ==================Functions Buttons=====================
     def Add_User(self):
         self.new_window=Toplevel(self.root)
-        self.app=Add(self.new_window)
+        self.app= Add(self.new_window)
     
     def Delete_User(self):
         self.new_window=Toplevel(self.root)

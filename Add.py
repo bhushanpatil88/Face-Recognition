@@ -7,6 +7,7 @@ from PIL import Image,ImageTk
 class Add:
     def __init__(self,root):
         self.root=root
+
         # set the window
         self.root.geometry("700x700+0+0")
         self.root.title("Face_Recogonition_System")
@@ -18,20 +19,20 @@ class Add:
         title = Label(text="Face Recognition System",font=("verdana",30,"bold"),bg="lightblue",fg="navyblue")
         title.place(x=0,y=0,width=700,height=80)
 
-        #Frame with border=2 and bg=white
-        main_frame = Frame(bd=2,bg="white")
-        main_frame.place(x=5,y=80,width=700,height=620)
+        # #Frame with border=2 and bg=white
+        # main_frame = Frame(bd=2,bg="white")
+        # main_frame.place(x=5,y=80,width=700,height=620)
 
         #Name of Student        
-        label_3 =Label(main_frame,text="Enter Name", width=30,height=2,font=("verdana",12,"bold"),fg="lightgreen",bg="white")
+        label_3 =Label(self.root,text="Enter Name", width=30,height=2,font=("verdana",12,"bold"),fg="lightgreen",bg="white")
         label_3.place(x=168,y=131)
-        entry_1=Entry(main_frame,textvariable=self.name,width=53)
+        entry_1=Entry(self.root,textvariable=self.name,width=53)
         entry_1.place(x=168,y=182)
 
         # E-Mail
-        label_3 =Label(main_frame,text="Enter E-Mail", width=30,height=2,font=("verdana",12,"bold"),fg="lightgreen",bg="white")
+        label_3 =Label(self.root,text="Enter E-Mail", width=30,height=2,font=("verdana",12,"bold"),fg="lightgreen",bg="white")
         label_3.place(x=168,y=230)
-        entry_1=Entry(main_frame,textvariable=self.email,width=53)
+        entry_1=Entry(self.root,textvariable=self.email,width=53)
         entry_1.place(x=168,y=282)
 
         button_frame1 = Frame(bd=2,bg="white")
@@ -65,4 +66,4 @@ class Add:
 if __name__ == "__main__":
     root=Tk()
     obj=Add(root)
-    # root.mainloop()
+    root.mainloop()
