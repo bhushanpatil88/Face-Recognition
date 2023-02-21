@@ -1,13 +1,14 @@
 from tkinter import*
 from tkinter import ttk
 from tkinter import messagebox
-from PIL import Image,ImageTk
+
 from add import Add
 from delete import Delete
 
 class Face_Recognition:
     def __init__(self,root):
         self.root=root
+        
         # set the window
         self.root.geometry("700x700+0+0")
         self.root.title("Face_Recogonition_System")
@@ -47,7 +48,7 @@ class Face_Recognition:
     
     def Delete_User(self):
         self.new_window=Toplevel(self.root)
-        self.app=Delete(self.new_window)
+        self.app= Delete(self.new_window)
     
     def Update_User(self):
         self.new_window=Toplevel(self.root)
